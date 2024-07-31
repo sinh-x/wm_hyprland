@@ -1,4 +1,13 @@
 [pyprland]
-plugins = [ "scratchpad" ]
+plugins = [ "scratchpads" ]
 
-[scratchpad]
+[scratchpads.btop]
+command = "alacritty --config-file /home/sinh/.config/bspwm/alacritty/alacritty.toml --class bashtop,bashtop --command btop"
+size = "900px 900px"
+class = "foot-btop"
+
+[scratchpads.bitwarden]
+command = "bitwarden"
+max_size = "1200px 1200px"
+class = "scratchpads"
+
