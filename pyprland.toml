@@ -3,7 +3,7 @@ plugins = [ "scratchpads", "fetch_client_menu" ]
 
 [scratchpads.btop]
 command = "alacritty --config-file /home/sinh/.config/bspwm/alacritty/alacritty.toml --class bashtop,bashtop --command btop"
-size = "900px 900px"
+size = "1200px 1200px"
 class = "foot-btop"
 
 [scratchpads.bitwarden]
@@ -11,3 +11,7 @@ command = "bitwarden"
 max_size = "1200px 1200px"
 class = "scratchpads"
 
+[scratchpads.pomodoro]
+command = "alacritty --config-file /home/sinh/.config/bspwm/alacritty/alacritty.toml --class pomodoro,pomodoro --command pomodoro"
+max_size = "1200px 1200px"
+class = "pomodoro"
