@@ -3,15 +3,31 @@ plugins = [ "scratchpads", "fetch_client_menu" ]
 
 [scratchpads.btop]
 command = "alacritty --config-file /home/sinh/.config/bspwm/alacritty/alacritty.toml --class bashtop,bashtop --command btop"
+position = "15% 15%"
 size = "1200px 1200px"
 class = "foot-btop"
 
 [scratchpads.bitwarden]
 command = "bitwarden"
+position = "15% 15%"
 max_size = "1200px 1200px"
 class = "scratchpads"
 
 [scratchpads.pomodoro]
 command = "alacritty --config-file /home/sinh/.config/bspwm/alacritty/alacritty.toml --class pomodoro,pomodoro --command pomodoro"
+position = "15% 15%"
 max_size = "1200px 1200px"
 class = "pomodoro"
+
+[scratchpads.messenger]
+command = "caprine"
+position = "15% 15%"
+max_size = "1500px 1500px"
+class = "messenger"
+
+[scratchpads.viber]
+command = "viber"
+position = "15% 15%"
+max_size = "1500px 1500px"
+class = "viber"
+
