@@ -1,5 +1,5 @@
 [pyprland]
-plugins = [ "scratchpads" ]
+plugins = [ "scratchpads", "fetch_client_menu" ]
 
 [scratchpads.btop]
 command = "alacritty --config-file /home/sinh/.config/bspwm/alacritty/alacritty.toml --class bashtop,bashtop --command btop"

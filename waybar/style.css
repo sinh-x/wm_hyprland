@@ -284,6 +284,7 @@ window#waybar.hidden {
 }
 #workspaces button.active {
   color: @red;
+  background-color: @yellow;
 }
 #workspaces button.urgent {
   color: @green;
