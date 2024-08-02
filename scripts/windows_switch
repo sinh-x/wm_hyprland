@@ -6,15 +6,15 @@ set active_window (hyprctl -j activewindow)
 set current_addr (echo "$active_window" | gojq -r '.address')
 
 set window (echo "$state" |
-  gojq -r '.[] | select(.monitor != -1 ) | "\(.class),\(.title),\(.workspace.name),\(.address)"' |
+  gojq -r '.[] | select(.monitor != -1 ) | "\(.class),\(.title),\(.workspace.name),\(.address),0"' |
     grep -v "special:" |
-    sed "s|$current_addr|focused ->|" |
-    sort -r |
+    sed "s|$current_addr,0| focused,1 |" |
+    sort -t, -k5,5r -k1,1r |
     column -s, -t |
     tofi --fuzzy-match true)
 
-set addr (echo "$window" | awk '{print $NF}')
-set ws (echo "$window" | awk '{print $NF-1}')
+set addr (echo "$window" | awk '{print $(NF-1)}')
+set ws (echo "$window" | awk '{print $(NF-2)}')
 
 if string match -r "focused*" "$addr"
     echo 'already focused, exiting'

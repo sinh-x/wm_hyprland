@@ -40,7 +40,7 @@ window#waybar.hidden {
 }
 
 #custom-power {
-  background-color: @red;
+  background-color: green;
   font-size: 16px;
 }
 
@@ -283,11 +283,11 @@ window#waybar.hidden {
   color: @foreground;
 }
 #workspaces button.active {
-  color: @red;
-  background-color: @yellow;
+  color: black;
+  background-color: white;
 }
 #workspaces button.urgent {
-  color: @green;
+  color: @red;
 }
 #workspaces button.hidden {
   color: @yellow;

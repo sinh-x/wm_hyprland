@@ -1,7 +1,7 @@
 #!/usr/bin/env fish
 
 set work_timer (pomodoro list | awk -F '│' '{print $3}' | grep -v '^$' | grep -v 'work_remaining (min)' | sort -n)
-set break_timer (pomodoro list | awk -F '│' '{print $4}' | grep -v '^$' | grep -v 'work_remaining (min)' | sort -n)
+set break_timer (pomodoro list | awk -F '│' '{print $4}' | grep -v '^$' | grep -v 'break_remaining (min)' | sort -n)
 
 set timer $work_timer $break_timer
 set timer (string match -rv '00:00' $timer)
